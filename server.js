@@ -10,8 +10,9 @@ app.listen(config.port, function() {
 })
 
 function _requestListener(req, res) {
-  res.writeHead({
+  res.writeHead(200, {
     "content-type": "text/plain"
   });
-  res.end('start')
+  res.write('Is started');
+  res.end();
 }
